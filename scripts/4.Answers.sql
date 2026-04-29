@@ -31,7 +31,7 @@ WHERE TaskID = 2;
 
 -- 3. Hire Purchase Installment: Monthly = [P * (1 + r * t)] / 36
 SELECT 
-    CAST((Principal * (1 + AnnualRate  * TermYears ))AS DECIMAL(10,2))/ 36 AS HirePurchaseInstallment
+    CAST((Principal * (1 + AnnualRate  * TermYears ) / 36)AS DECIMAL(10,2)) AS HirePurchaseInstallment
 FROM dbo.FinancialTasks
 WHERE TaskID = 3;
 
