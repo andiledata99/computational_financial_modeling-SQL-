@@ -28,7 +28,7 @@ A production-grade data engineering project should include:
 
 The repository should ideally follow a standard structure such as:
 
-- `scripts/` - SQL scripts for database provisioning and profiling
+- `sql/` - SQL scripts for database provisioning and profiling
 - `src/` - ETL or transformation code (Python, Spark, dbt, etc.)
 - `docs/` - Documentation, architecture, and business rules
 - `tests/` - Data quality tests, unit tests, and validation scripts

@@ -4,10 +4,12 @@
 
 This repository currently implements a SQL-only data pipeline with the following layers:
 
-- `scripts/1.creating_database.sql` - Database provisioning
-- `scripts/2.creating_financial_tasks_table.sql` - Schema creation
-- `scripts/3.inserting_data_into_table.sql` - Data ingestion
-- `scripts/4.Answers.sql` - Analytical queries and formula execution
+- `sql/01_create_database.sql` - Database provisioning
+- `sql/02_create_financial_tasks_table.sql` - Schema creation
+- `sql/03_load_financial_tasks.sql` - Data ingestion
+- `sql/04_financial_analysis.sql` - Analytical queries and formula execution
+- `reference/financial_modeling_questions.pdf` - Reference assessment documentation
+- `reference/financial_modeling_questions.pdf` - Reference assessment documentation
 
 ## Recommended Architecture for Production
 

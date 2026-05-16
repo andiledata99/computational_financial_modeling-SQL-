@@ -10,27 +10,27 @@ The project is designed for financial engineering use cases such as interest cal
 
 ## Repository Structure
 
-- `scripts/1.creating_database.sql` - Creates the `FinancialEngineeringDB` database if it does not exist.
-- `scripts/2.creating_financial_tasks_table.sql` - Defines the `FinancialTasks` table and enforces decimal precision for financial accuracy.
-- `scripts/3.inserting_data_into_table.sql` - Loads sample financial task records used for analysis and modeling.
-- `scripts/4.Answers.sql` - Contains practical assessment query answers and implementation examples for financial formulas.
-- `project_framework/computational_financial_modeling_(SQL)_questions.pdf` - The original assessment question set for reference.
+- `sql/01_create_database.sql` - Creates the `FinancialEngineeringDB` database if it does not exist.
+- `sql/02_create_financial_tasks_table.sql` - Defines the `FinancialTasks` table and enforces decimal precision for financial accuracy.
+- `sql/03_load_financial_tasks.sql` - Loads sample financial task records used for analysis and modeling.
+- `sql/04_financial_analysis.sql` - Contains practical assessment query answers and implementation examples for financial formulas.
+- `reference/financial_modeling_questions.pdf` - The original assessment question set for reference.
 
 ## How to Run
 
 1. Open Microsoft SQL Server Management Studio (SSMS) or use `sqlcmd`.
-2. Run `scripts/1.creating_database.sql` to create the target database.
-3. Run `scripts/2.creating_financial_tasks_table.sql` to build the table schema.
-4. Run `scripts/3.inserting_data_into_table.sql` to insert sample records.
-5. Run `scripts/4.Answers.sql` to execute the financial calculations.
+2. Run `sql/01_create_database.sql` to create the target database.
+3. Run `sql/02_create_financial_tasks_table.sql` to build the table schema.
+4. Run `sql/03_load_financial_tasks.sql` to insert sample records.
+5. Run `sql/04_financial_analysis.sql` to execute the financial calculations.
 
 Example command using `sqlcmd`:
 
 ```powershell
-sqlcmd -S localhost -i "scripts\1.creating_database.sql"
-sqlcmd -S localhost -i "scripts\2.creating_financial_tasks_table.sql"
-sqlcmd -S localhost -i "scripts\3.inserting_data_into_table.sql"
-sqlcmd -S localhost -i "scripts\4.Answers.sql"
+sqlcmd -S localhost -i "sql\01_create_database.sql"
+sqlcmd -S localhost -i "sql\02_create_financial_tasks_table.sql"
+sqlcmd -S localhost -i "sql\03_load_financial_tasks.sql"
+sqlcmd -S localhost -i "sql\04_financial_analysis.sql"
 ```
 
 ## Data Model
@@ -53,16 +53,6 @@ Design rationale:
 - Explicit schema definitions and data types.
 - Sample dataset includes multiple financial formulas and frequency scenarios.
 - Documentation captures the execution process and data model.
-
-## Recommended Enhancements for Production
-
-To align this repository with real-world data engineering practices, the next steps are:
-
-- Add an ETL orchestration layer (Airflow, dbt, Azure Data Factory, or equivalent).
-- Introduce staging/curated zones for raw, transformed, and analytical data.
-- Add data validation and quality checks for values such as rate ranges and non-null fields.
-- Add automated tests and CI/CD for SQL deployments.
-- Add metadata and business glossary documentation.
 
 ## Contribution
 
